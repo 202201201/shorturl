@@ -21,7 +21,9 @@ async function handleUserLogIn( req, res ) {
     // setUser( sessionID, user );
     const token=setUser( user );
     // res.cookie( 'uid', sessionID );
-    res.cookie( 'uid', token);
+    res.cookie( 'token', token);
+    // return res.redirect( "/" );
+    // res.json( { token:token } );
     return res.redirect( "/" );
 }
 

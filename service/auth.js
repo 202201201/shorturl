@@ -7,7 +7,8 @@ const secret = "Zeel@21";
 function setUser( user ) {
     return jwt.sign( {
         _id: user._id,
-        email:user.email
+        email: user.email,
+        role:user.role,
     }, secret );
 }
 
